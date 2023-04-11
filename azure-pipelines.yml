@@ -30,7 +30,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    projects: '**/*.csproj','!SeleniumUiTest.csproj'
+    projects: '**/*.csproj, !SeleniumUiTest.csproj'
     arguments: '--configuration $(BuildConfiguration)'
 - task: VSBuild@1
   inputs:
